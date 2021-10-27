@@ -1,0 +1,27 @@
+{
+  "name": "projeto-01-m2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlcidesJrr/Projeto-01-M3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlcidesJrr/Projeto-01-M3/issues"
+  },
+  "homepage": "https://github.com/AlcidesJrr/Projeto-01-M3#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

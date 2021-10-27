@@ -57,8 +57,8 @@ app.get("/filmes", (req, res) => {
 
 app.get("/filmes/:id", (req, res) => {
     const id = req.params.id -1;
-    const filmes_ = filmes[id];
-    res.send(filmes_)
+
+    res.send(filmes[id])
 });
 
 

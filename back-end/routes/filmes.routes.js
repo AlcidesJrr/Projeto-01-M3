@@ -24,7 +24,7 @@ const filmes= [
     {
         id: 3,
         nome: "A Colônia",
-        genero: "Ficção Científica, Suspense, Ação",
+        genero: "Ficção, Suspense, Ação",
         nota: 5.3,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/ff283967d5d2361544c7d0bc3ac4020decf296fcc2070cfe669e9be8ce0549f9._UR1920,1080_RI_SX356_FMwebp_.jpg",
         visto: fls
@@ -43,6 +43,29 @@ const filmes= [
         genero: "Suspense, Ação",
         nota: 6.2,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/45e4a396f47b5f74301b2ab31a42938d970c8ecf05be7120bf192547ea47310f._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        visto: fls
+    },
+        {
+        id: 6,
+        nome: "O Veterano",
+        genero: "Suspense, Ação",
+        nota: 5.9,
+        imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/21a5c1e74db073fac51f092db58b353f047a00167939125aee230beb8cd111d9._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        visto: fls
+    },
+    {
+        id: 7,
+        nome: "O Senhor das Armas",
+        genero: "Drama, Ação",
+        nota: 7.6,
+        imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/bd6103f749a5e73b4bc9586ce5719cb556c17859c4bcc5792e8efad20c0eb1a3._UR1920,1080_RI_SX356_FMwebp_.jpg",
+    },
+    {
+        id: 8,
+        nome: "A Rebelião",
+        genero: "Ficção Científica, Suspense",
+        nota: 6.0,
+        imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/30c9dca062660f9a78b227205e8703c8c6f99b4d484e59938bb4f1bb56e5a714._UR1920,1080_RI_SX356_FMwebp_.jpg",
         visto: fls
     }
 ];

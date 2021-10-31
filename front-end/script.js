@@ -27,11 +27,11 @@ const cardLista_ = async () => {
         <p class="card-text"><b>Genero</b>: ${filmes_.genero}</p>
         <p class="card-text"><img src="./img/imdb.png" class="card-img-nota" alt="icone imdb"> ${filmes_.nota}</p>
           <div class="btn-card">
-              <button type="button" class="btn btn-link" onclick="editFilme(${filmes_.id})" data-bs-toggle="modal" data-bs-target="#exampleModal" ><img src=./img/edit.png></button>
+              <button type="button" class="btn btn-link" onclick="editFilme(${filmes_.id})" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="tooltip" data-placement="top" title="Editar" ><img src=./img/edit.png></button>
 
-              <button type="button" class="btn btn-link" onclick="deleteFilme(${filmes_.id})"><img src=./img/del.png></button>
+              <button type="button" class="btn btn-link" onclick="deleteFilme(${filmes_.id})" data-toggle="tooltip" data-placement="top" title="Deletar"><img src=./img/del.png></button>
 
-              <button type="button" class="btn btn-link" onclick="editVisto(${filmes_.id})" id="img_fls-vst"><img src=${filmes_.visto}></button>
+              <button type="button" class="btn btn-link" onclick="editVisto(${filmes_.id})" id="img_fls-vst" data-toggle="tooltip" data-placement="top" title="Marcar como visto"><img src=${filmes_.visto}></button>
           </div>
         `)   
     })
@@ -101,7 +101,6 @@ const editFilme = async (id) => {
   genero.value = filmes_.genero;
   imagem.value = filmes_.imagem;
   nota.value = filmes_.nota;
-  visto.value = filmes_.visto;
 }
 
 const editVisto = async ( id) => {

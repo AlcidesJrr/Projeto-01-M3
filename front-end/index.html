@@ -53,10 +53,6 @@
 <div class="modal fade" id="exampleModal" tabindex="-1"     aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">      
-        <h5 class="modal-title" id="exampleModalLabel">Cadastre seu filme</h5>
-        <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
       <div class="modal-body">
         <main class="container">
         <section class ="card-add">
@@ -70,22 +66,26 @@
                       </div>
                       <div class="col-4">
                           <div class="form-floating mb-3">
-                              <input type="text" class="form-control" id="genero" placeholder="Digite o seu genero">
+                              <input type="text" class="form-control" id="genero" placeholder="Digite o genero">
                               <label for="genero">Genero</label>
                           </div>
                       </div>
                       <div class="col-4">
                           <div class="form-floating mb-3">
-                              <input type="" class="form-control" id="imagem" placeholder="Digite a url da imagem da imagem">
+                              <input type="" class="form-control" id="imagem" placeholder="Imagem ">
                               <label for="imagem">Imagem</label>
                           </div>
                       </div>
                       <div class="col-4">
                           <div class="form-floating mb-3">
-                              <input type="text" class="form-control" id="nota" placeholder="Digite o salário">
+                              <input type="text" class="form-control" id="nota" placeholder="Nota">
                               <label for="nota">Nota</label>
                           </div>
-                   </div>        
+                      </div>
+                      <div>
+                        <input type="text" class="form-control" id="visto" placeholder="">
+                        <label for="visto">Visto</label>
+                      </div>        
 
                    <div class="row-button">
                    <div class=class="col">
@@ -100,7 +100,9 @@
   </div>
 </div>
 
+
   <div class="card-all" id="cardLista"></div>
+
 </main>
     <footer class="bg-dark py-2">
       <p class="text-white text-center mb-0">Desenvolvido por Alcides Jr</p>

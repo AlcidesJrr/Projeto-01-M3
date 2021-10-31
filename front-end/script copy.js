@@ -1,5 +1,4 @@
 const cardLista = document.getElementById('cardLista');
-const visto_ = document.getElementById('visto');
 
 let edicao = false;
 let idEdicao = 0;
@@ -8,11 +7,8 @@ const nome = document.getElementById('nome');
 const genero = document.getElementById('genero');
 const imagem = document.getElementById('imagem');
 const nota = document.getElementById('nota');
-const visto = document.getElementById('visto');
-
 
 const apiUrl = 'http://localhost:3000';
-
 
 const cardLista_ = async () => {
     const response = await fetch(apiUrl)
@@ -20,22 +16,30 @@ const cardLista_ = async () => {
     console.log(filmes);
     filmes.map((filmes_) => {
         cardLista.insertAdjacentHTML('beforeend', `
-       <div class="card" style="width: 19rem;">
+        <div class="card" style="width: 19rem;">
       <img src=${filmes_.imagem} class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${filmes_.nome}</h5>
         <p class="card-text"><b>Genero</b>: ${filmes_.genero}</p>
         <p class="card-text"><img src="./img/imdb.png" class="card-img-nota" alt="icone imdb"> ${filmes_.nota}</p>
+        <div class="btn-card-all">
           <div class="btn-card">
-              <button type="button" class="btn btn-link" onclick="editFilme(${filmes_.id})" data-bs-toggle="modal" data-bs-target="#exampleModal" ><img src=./img/edit.png></button>
-
-              <button type="button" class="btn btn-link" onclick="deleteFilme(${filmes_.id})"><img src=./img/del.png></button>
-
-              <button type="button" class="btn btn-link" onclick="editVisto(${filmes_.id})" id="img_fls-vst"><img src=${filmes_.visto}></button>
+              <button type="button" class="btn btn-outline-success" onclick="editFilme(${filmes_.id})" >Edit</button>
+              <button type="button" class="btn btn-outline-danger" onclick="deleteFilme(${filmes_.id})">Del</button>
           </div>
+          <div class="texto" contenteditable="false">
+      </div>
+      
+      <div class="form-check">
+
+      <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+      <label class="btn btn-secondary" for="option4">Visto</label>
+      
+      </div> 
+      </div>
+    </div>
         `)   
     })
-    
 };
 
 const submitForm = async (event) => {
@@ -70,8 +74,8 @@ const createFilme = async(filmes_) => {
   cardLista_();
 
 }
-
-const putFilme = async (filmes_, id) => {
+  
+const putFilme = async(filmes_, id) => {
   const request = new Request(`${apiUrl}/edit/${id}`, {
     method: 'PUT',
     body: JSON.stringify(filmes_),
@@ -82,11 +86,12 @@ const putFilme = async (filmes_, id) => {
 
   const response = await fetch(request);
   const result = await response.json();
-  alert(result.message);
+  alert(result.message)
   edicao = false;
   idEdicao = 0;
   cardLista_();
 }
+ 
 
 const getFilmeById = async (id) => {
   const response = await fetch(`${apiUrl}/${id}`);
@@ -101,37 +106,19 @@ const editFilme = async (id) => {
   genero.value = filmes_.genero;
   imagem.value = filmes_.imagem;
   nota.value = filmes_.nota;
-  visto.value = filmes_.visto;
 }
 
-const editVisto = async ( id) => {
-  const filmes_ = await getFilmeById(id);
-
-  const request = new Request(`${apiUrl}/editVisto/${id}`, {
-    method: 'PUT',
-    body: JSON.stringify(filmes_),
-    headers: new Headers({
-        'Content-Type': 'application/json'
-    })
-  })
-  const response = await fetch(request);
-  const result = await response.json();
-  cardLista.innerHTML = '';
-  cardLista_();
-
-}
- 
 const deleteFilme = async (id) => {
   const request =  new Request(`${apiUrl}/delete/${id}`, {
     method: 'DELETE'
   })
   const response = await fetch(request);
   const result = await response.json();
+
   alert(result.message);
   cardLista.innerHTML = '';
   cardLista_();
 }
-
 
 const clearFields = () => {
   nome.value = '';

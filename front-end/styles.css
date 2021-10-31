@@ -18,7 +18,7 @@ header, footer {
 }
 
 header {
-    position: fixed;
+    position: absolute;
 }
 
 footer {
@@ -149,7 +149,11 @@ footer {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    
+}
+
+.btn-card-all button {
+    width: 5%;
+
 }
 
 label .btn {
@@ -177,10 +181,6 @@ label .btn {
 
 } 
 
-.btn-visto {
-    padding: 0;
-}
-
 .card-all {
     position: relative;
     display: flex;
@@ -189,9 +189,24 @@ label .btn {
     justify-content: center;
 }
 
-
-.form-check {
-    margin-top: 15px;
+#visto{
+    display: none;
 }
 
+#img_fls-vst {
+    margin-left: 100px;
+}
+
+button img {
+    width: 75%;
+}
+
+button:hover {
+    background-color: #33353354;
+
+}
+    
+
 /* ------------------------------- */
+
+

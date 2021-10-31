@@ -9,8 +9,6 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/', filmesRouter);
-app.use('/detalhes/:id', filmesRouter);
-
 
 app.listen(port, () => {
     console.log(`o app está rodando em: http://localhost:${port}`);

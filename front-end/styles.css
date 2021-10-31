@@ -110,7 +110,7 @@ footer {
 .card-title {
     margin-bottom: 1rem;
     color: blanchedalmond;
-    font-size: 1.1rem;
+    font-size: 1.03rem;
 }
 
 .card-text {
@@ -194,19 +194,20 @@ label .btn {
 }
 
 #img_fls-vst {
-    margin-left: 100px;
+    margin-left: 110px;
 }
 
 button img {
-    width: 75%;
+    width: 21px;
+    height: 22px;
 }
 
 button:hover {
     background-color: #33353354;
-
 }
+
+.btn-card button {
+    width: 50px;
+    height: 40px;
     
-
-/* ------------------------------- */
-
-
+}

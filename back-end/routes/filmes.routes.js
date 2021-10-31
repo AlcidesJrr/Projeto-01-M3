@@ -86,6 +86,7 @@ router.put('/edit/:id', (req, res) => {
         ...filmesEdit
     };
     res.send({
+        message: `O filme ${filmes[index].nome} foi editado com sucesso!`,
         data: filmes[index]
     });
 });

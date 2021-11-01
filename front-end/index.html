@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="./img/logo-pag.png"/>
-    <title>Tele Faddilmes</title>
+    <title>Tele Filmes</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -58,7 +58,7 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-      <div class="carousel-inner">
+      <div class="carousel-inner" id='imagem-capa'>
         <div class="carousel-item active">
           <img class="d-block w-100" src="https://m.media-amazon.com/images/S/sonata-images-prod/SVOD_ROW_SH_FastandFurious/2c00960a-b26e-4344-a17c-624bf7d112d1._UR3000,600_SX1500_FMwebp_.jpeg" alt='capa de filmes aleatórios'" alt="First slide">
         </div>
@@ -112,11 +112,6 @@
                               <label for="nota">Nota</label>
                           </div>
                       </div>
-                      <div>
-                        <input type="text" class="form-control" id="visto" placeholder="">
-                        <label for="visto">Visto</label>
-                      </div>        
-
                    <div class="row-button">
                    <div class=class="col">
                     <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Enviar</button>
@@ -130,6 +125,23 @@
   </div>
 </div>
 
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja deletar?
+      </div>
+      <div class="modal-footer">
+    <div class="row-button">
+             <div class=class="col">
+              <button type="submit" class="btn btn-success" data-bs-dismiss="modal" onclick="deleteFilme()">Deletar</button>
+              <button type="reset" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
 
   <div class="card-all" id="cardLista"></div>
 
@@ -145,3 +157,4 @@
     ></script>
   </body>
 </html>
+

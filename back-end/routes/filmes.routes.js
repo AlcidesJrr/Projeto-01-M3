@@ -59,12 +59,13 @@ const filmes= [
         genero: "Drama, Ação",
         nota: 7.6,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/bd6103f749a5e73b4bc9586ce5719cb556c17859c4bcc5792e8efad20c0eb1a3._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        visto: fls
     },
     {
         id: 8,
         nome: "A Rebelião",
         genero: "Ficção Científica, Suspense",
-        nota: 6.0,
+        nota: 6.1,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/30c9dca062660f9a78b227205e8703c8c6f99b4d484e59938bb4f1bb56e5a714._UR1920,1080_RI_SX356_FMwebp_.jpg",
         visto: fls
     }
@@ -93,7 +94,7 @@ router.post('/add', (req, res) => {
     filmes_.visto = fls;
     filmes.push(filmes_);
     res.status(201).send({
-        message: 'Cadastro com sucesso',
+        message: 'Cadastro realizado com sucesso',
         data: filmes_
     });
 });
@@ -139,6 +140,7 @@ router.delete('/delete/:id', (req, res) => {
 
     const index = filmes.findIndex(filmes_ => filmes_.id == idParam);
     const nome = filmes[index];
+    
     filmes.splice(index, 1);
     res.send({
         message: `Filme ${nome.nome} excluida com sucesso !`,

@@ -20,23 +20,27 @@ const cardLista_ = async () => {
     console.log(filmes);
     filmes.map((filmes_) => {
         cardLista.insertAdjacentHTML('beforeend', `
-       <div class="card" style="width: 19rem;">
+
+      <div class="card" style="width: 19rem;">
       <img src=${filmes_.imagem} class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${filmes_.nome}</h5>
         <p class="card-text"><b>Genero</b>: ${filmes_.genero}</p>
         <p class="card-text"><img src="./img/imdb.png" class="card-img-nota" alt="icone imdb"> ${filmes_.nota}</p>
           <div class="btn-card">
+
               <button type="button" class="btn btn-link" onclick="editFilme(${filmes_.id})" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="tooltip" data-placement="top" title="Editar" ><img src=./img/edit.png></button>
 
-              <button type="button" class="btn btn-link" onclick="deleteFilme(${filmes_.id})" data-toggle="tooltip" data-placement="top" title="Deletar"><img src=./img/del.png></button>
+              <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Deletar" onclick="deleteFilme(${filmes_.id})"><img src=./img/del.png></button>
 
               <button type="button" class="btn btn-link" onclick="editVisto(${filmes_.id})" id="img_fls-vst" data-toggle="tooltip" data-placement="top" title="Marcar como visto"><img src=${filmes_.visto}></button>
-          </div>
+      </div>
+      </div>
         `)   
     })
     
 };
+
 
 const submitForm = async (event) => {
   event.preventDefault();
@@ -103,7 +107,7 @@ const editFilme = async (id) => {
   nota.value = filmes_.nota;
 }
 
-const editVisto = async ( id) => {
+const editVisto = async (id) => {
   const filmes_ = await getFilmeById(id);
 
   const request = new Request(`${apiUrl}/editVisto/${id}`, {

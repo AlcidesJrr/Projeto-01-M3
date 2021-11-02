@@ -229,6 +229,10 @@ margin-right: 50px;
 
 }
 
+.modal-title {
+    color: rgb(245, 244, 243);
+}
+
 /* .card-body {
   display: none;
 } 

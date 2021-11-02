@@ -134,7 +134,6 @@ router.put('/editVisto/:id', (req, res) => {
     res.send(filmes);
 });
 
-
 router.delete('/delete/:id', (req, res) => {
     const idParam = req.params.id;
 
@@ -146,6 +145,5 @@ router.delete('/delete/:id', (req, res) => {
         message: `Filme ${nome.nome} excluida com sucesso !`,
     });
 });
-
 
 module.exports = router;

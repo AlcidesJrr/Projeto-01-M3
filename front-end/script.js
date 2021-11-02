@@ -10,9 +10,7 @@ const imagem = document.getElementById('imagem');
 const nota = document.getElementById('nota');
 const visto = document.getElementById('visto');
 
-
 const apiUrl = 'http://localhost:3000';
-
 
 const cardLista_ = async () => {
     const response = await fetch(apiUrl)
@@ -25,22 +23,22 @@ const cardLista_ = async () => {
       <img src=${filmes_.imagem} class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${filmes_.nome}</h5>
-        <p class="card-text"><b>Genero</b>: ${filmes_.genero}</p>
+        <p class="card-text"><b>Gêneros</b>: ${filmes_.genero}</p>
         <p class="card-text"><img src="./img/imdb.png" class="card-img-nota" alt="icone imdb"> ${filmes_.nota}</p>
           <div class="btn-card">
 
               <button type="button" class="btn btn-link" onclick="editFilme(${filmes_.id})" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="tooltip" data-placement="top" title="Editar" ><img src=./img/edit.png></button>
 
-              <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Deletar" onclick="deleteFilme(${filmes_.id})"><img src=./img/del.png></button>
-
+              <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Deletar" onclick='deleteFilme("${filmes_.id}", "${filmes_.nome}")'><img src=./img/del.png></button>
+              
               <button type="button" class="btn btn-link" onclick="editVisto(${filmes_.id})" id="img_fls-vst" data-toggle="tooltip" data-placement="top" title="Marcar como visto"><img src=${filmes_.visto}></button>
+
       </div>
       </div>
         `)   
     })
     
 };
-
 
 const submitForm = async (event) => {
   event.preventDefault();
@@ -124,17 +122,24 @@ const editVisto = async (id) => {
 
 }
  
-const deleteFilme = async (id) => {
+const deleteFilme = async (id, nome) => {
+ 
+const confirm = window.confirm(
+  `Tem certeza que deseja deletar ${nome}?`
+);
+
+if (confirm) {
   const request =  new Request(`${apiUrl}/delete/${id}`, {
     method: 'DELETE'
-  })
+  });
+
   const response = await fetch(request);
   const result = await response.json();
   alert(result.message);
   cardLista.innerHTML = '';
   cardLista_();
 }
-
+}
 
 const clearFields = () => {
   nome.value = '';

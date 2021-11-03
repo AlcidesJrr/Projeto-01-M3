@@ -35,6 +35,7 @@ const cardLista_ = async () => {
 
       </div>
       </div>
+      </div>
         `)   
     })
     
@@ -126,7 +127,8 @@ const deleteFilme = async (id, nome) => {
  
 const confirm = window.confirm(
   `Tem certeza que deseja deletar ${nome}?`
-);
+);A
+
 
 if (confirm) {
   const request =  new Request(`${apiUrl}/delete/${id}`, {

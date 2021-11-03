@@ -3,15 +3,16 @@ html, body {
 }
 body {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
     background-color: rgb(15, 15, 15);
     font-family: Arial,sans-serif!important;
 }
 main {
-    flex: 1;
-     margin: auto;
-   
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    
 }
 
 header, footer {
@@ -30,11 +31,6 @@ footer {
     color: rgb(140, 140, 145);
 }
 
-.card-img-top {
-    width: 50% !important;
-    height: auto !important;
-    margin: 0 auto;
-}
 
 .collapse a {
     font-size: 0.9rem;
@@ -76,13 +72,6 @@ footer {
 }
 
 
-/* .btn-primary {
-    color: #fff;
-    background-color: #2b2b2c;
-    border-color: #76787a62;
-    margin-right: 60px;
-} */
-
 .img-logo{
     margin-left: 10px;
 }
@@ -90,36 +79,59 @@ footer {
 .card-img-top {
     width: 100% !important;
     height: 100% !important;
-    margin: 0 auto;
-    position: relative;
+    margin: 0;
+}
+
+.card-body {
+  display: none;
+} 
+
+.card:hover .card-body{
+  display: block;
+  z-index: 1;
+  position: absolute;
+  bottom: -175px;
+  background-color: rgb(32, 31, 31);
+  
 }
 
 .card {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: rgba(32, 31, 31, 0.329);
+    align-items: flex-start;
+    background-color: rgb(32, 31, 31);
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
-    margin: 15px 3px 2px 3px;
+    margin: 3px 3px 2px 3px;
+    
+}
+
+.card-all {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .card:hover {
     transition: 0.4s ease-out;
-    transform: scale(1.1);
+    transform: scale(1.15);
+    bottom: 10px;
+    z-index: 1;
 }
 
 .card-title {
     margin-bottom: 1rem;
-    color: blanchedalmond;
+    color: rgb(240, 238, 235);
     font-size: 1.03rem;
 }
 
 .card-text {
-    color: blanchedalmond;
+    color: rgb(240, 238, 235);
     margin: 0;
     font-size: 0.9rem;
     
@@ -147,13 +159,6 @@ footer {
     font-size: 0.8rem;
     border-radius: 0.25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-.btn-card-all {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
 }
 
 .btn-card-all button {
@@ -185,14 +190,6 @@ label .btn {
     background-color: #137c2a;
 
 } 
-
-.card-all {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
 #visto{
     display: none;
@@ -233,10 +230,3 @@ margin-right: 50px;
     color: rgb(245, 244, 243);
 }
 
-/* .card-body {
-  display: none;
-} 
-
-.card:hover .card-body{
-  display: block;
-} */

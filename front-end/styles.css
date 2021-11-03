@@ -1,5 +1,5 @@
 html, body {
-    height: 100%;
+    min-height:100% ;
 }
 body {
     display: flex;
@@ -24,7 +24,11 @@ header {
 }
 
 footer {
-    margin-top: auto;
+    margin: auto;
+    position: fixed; 
+    height: 2.5rem; 
+    width: 100%; 
+    bottom: 0;
 }
 
 .bg-dark p {
@@ -72,10 +76,6 @@ footer {
 }
 
 
-.img-logo{
-    margin-left: 10px;
-}
-
 .card-img-top {
     width: 100% !important;
     height: 100% !important;
@@ -92,6 +92,7 @@ footer {
   position: absolute;
   bottom: -175px;
   background-color: rgb(32, 31, 31);
+  border: 1px solid rgba(44, 48, 241, 0.125);
   
 }
 
@@ -105,7 +106,18 @@ footer {
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
     margin: 3px 3px 2px 3px;
-    
+}
+
+.text-c {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgb(224, 222, 218);
+    padding: 1rem;
+    margin: 0 0 0 3.2%;
+    font-size: 1.3rem;
+
 }
 
 .card-all {
@@ -115,10 +127,12 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    margin-bottom: 80px;
+    margin-top: -17px;
 }
 
 .card:hover {
-    transition: 0.4s ease-out;
+    transition: 0.8s ease-out;
     transform: scale(1.15);
     bottom: 10px;
     z-index: 1;
@@ -196,7 +210,7 @@ label .btn {
 }
 
 #img_fls-vst {
-    margin-left: 110px;
+    margin-left: 109px;
 }
 
 button img {
@@ -230,3 +244,53 @@ margin-right: 50px;
     color: rgb(245, 244, 243);
 }
 
+@media (max-width: 1300px) {
+    .text-c p {
+      margin-left: 3.2%;
+    }
+  }
+
+  @media (min-width: 1423px) {
+    .text-c p {
+      margin-left: 3.2%;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .text-c p {
+      margin-left: 6.3%;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .card-all {
+      margin-left: 8%;
+      margin-right: 8%;
+    }
+  }
+
+  @media (min-width: 1423px) {
+    .img-logo {
+      margin-left: 6.5%;
+    }
+  }
+
+   @media (min-width: 1920px) {
+    .img-logo {
+      margin-left: 0%;
+    }
+  }
+
+   @media (min-width: 1423px) {
+    .btn-add {
+        margin-right: 6%;
+    }
+  }
+
+   @media (min-width: 1920px) {
+    .btn-add {
+        margin-right: 9%;
+    }
+  }
+  
+  

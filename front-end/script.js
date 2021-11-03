@@ -18,7 +18,7 @@ const cardLista_ = async () => {
     console.log(filmes);
     filmes.map((filmes_) => {
         cardLista.insertAdjacentHTML('beforeend', `
-
+        
       <div class="card" style="width: 19rem;">
       <img src=${filmes_.imagem} class="card-img-top" alt="...">
       <div class="card-body">

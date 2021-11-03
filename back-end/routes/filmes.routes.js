@@ -11,6 +11,7 @@ const filmes= [
         genero: "Ação",
         nota: 8.5,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/b4ad02ba551bcd32cb496f82f6ec0e3b0cff3f0ddb218ee9b6844a4824e225f7._UR1920,1080_RI_UX400_UY225_.jpg",
+        trailer: "https://www.youtube.com/embed/MYwv3gXtB4o",
         visto: fls
         },
     {
@@ -19,6 +20,7 @@ const filmes= [
         genero: "Ação",
         nota: 7.4,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/54970855768ec30aa5a04100c6ba4fed199dab46b617811f442a63dc7fecb43c._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        trailer: "https://www.youtube.com/embed/CcQpYEcZXaU",
         visto: fls
     },
     {
@@ -27,6 +29,7 @@ const filmes= [
         genero: "Ficção, Suspense, Ação",
         nota: 5.3,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/ff283967d5d2361544c7d0bc3ac4020decf296fcc2070cfe669e9be8ce0549f9._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        trailer:"https://www.youtube.com/embed/K0QJO22OB-4",
         visto: fls
     },
     {
@@ -35,6 +38,7 @@ const filmes= [
         genero: "Chamas da Vingança",
         nota: 7.7,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/04c8311a04f7d9b8949004006bfd3d6f602befccba63295a3956a7928b76adfe._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        trailer:"https://www.youtube.com/embed/ALKCTuH79iE",
         visto: fls
     },
     {
@@ -43,6 +47,7 @@ const filmes= [
         genero: "Suspense, Ação",
         nota: 6.2,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/45e4a396f47b5f74301b2ab31a42938d970c8ecf05be7120bf192547ea47310f._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        trailer: "https://www.youtube.com/embed/mhO2WJ3MNRI",
         visto: fls
     },
         {
@@ -51,6 +56,7 @@ const filmes= [
         genero: "Suspense, Ação",
         nota: 5.9,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/21a5c1e74db073fac51f092db58b353f047a00167939125aee230beb8cd111d9._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        trailer: "https://www.youtube.com/embed/-8OVlXmf-98",
         visto: fls
     },
     {
@@ -59,6 +65,7 @@ const filmes= [
         genero: "Drama, Ação",
         nota: 7.6,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/bd6103f749a5e73b4bc9586ce5719cb556c17859c4bcc5792e8efad20c0eb1a3._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        trailer:"https://www.youtube.com/embed/2j4JgUKDM_k",
         visto: fls
     },
     {
@@ -67,6 +74,7 @@ const filmes= [
         genero: "Ficção Científica, Suspense",
         nota: 6.1,
         imagem: "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/30c9dca062660f9a78b227205e8703c8c6f99b4d484e59938bb4f1bb56e5a714._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        trailer:"https://www.youtube.com/embed/Qbxr4xYvr2c",
         visto: fls
     }
 ];

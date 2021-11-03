@@ -8,7 +8,9 @@ const nome = document.getElementById('nome');
 const genero = document.getElementById('genero');
 const imagem = document.getElementById('imagem');
 const nota = document.getElementById('nota');
+const trailer = document.getElementById('trailer');
 const visto = document.getElementById('visto');
+
 
 const apiUrl = 'http://localhost:3000';
 
@@ -22,6 +24,7 @@ const cardLista_ = async () => {
       <div class="card" style="width: 19rem;">
       <img src=${filmes_.imagem} class="card-img-top" alt="...">
       <div class="card-body">
+      <iframe class="video" width="310" height="210" src=${filmes_.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h5 class="card-title">${filmes_.nome}</h5>
         <p class="card-text"><b>Gêneros</b>: ${filmes_.genero}</p>
         <p class="card-text"><img src="./img/imdb.png" class="card-img-nota" alt="icone imdb"> ${filmes_.nota}</p>
@@ -47,7 +50,8 @@ const submitForm = async (event) => {
     nome: nome.value,
     genero: genero.value,
     imagem: imagem.value,
-    nota: parseFloat(nota.value),
+    trailer: trailer.value,
+    nota: parseFloat(nota.value)
   }
 
   if(edicao) {
@@ -103,6 +107,7 @@ const editFilme = async (id) => {
   nome.value = filmes_.nome;
   genero.value = filmes_.genero;
   imagem.value = filmes_.imagem;
+  trailer.value = filmes_.trailer;
   nota.value = filmes_.nota;
 }
 
@@ -127,8 +132,7 @@ const deleteFilme = async (id, nome) => {
  
 const confirm = window.confirm(
   `Tem certeza que deseja deletar ${nome}?`
-);A
-
+);
 
 if (confirm) {
   const request =  new Request(`${apiUrl}/delete/${id}`, {
@@ -147,6 +151,7 @@ const clearFields = () => {
   nome.value = '';
   genero.value = '';
   imagem.value = '';
+  trailer.value = '';
   nota.value = '';
 }
 

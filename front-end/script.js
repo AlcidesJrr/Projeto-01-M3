@@ -22,22 +22,22 @@ const cardLista_ = async () => {
         cardLista.insertAdjacentHTML('beforeend', `
         
       <div class="card" style="width: 19rem;">
-      <img src=${filmes_.imagem} class="card-img-top" alt="...">
-      <div class="card-body">
-      <iframe class="video" width="310" height="210" src=${filmes_.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h5 class="card-title">${filmes_.nome}</h5>
-        <p class="card-text"><b>Gêneros</b>: ${filmes_.genero}</p>
-        <p class="card-text"><img src="./img/imdb.png" class="card-img-nota" alt="icone imdb"> ${filmes_.nota}</p>
+        <img src=${filmes_.imagem} class="card-img-top" alt="...">
+        <div class="card-body">
+          <iframe class="video" width="310" height="210" src=${filmes_.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h5 class="card-title">${filmes_.nome}</h5>
+          <p class="card-text"><b>Gêneros</b>: ${filmes_.genero}</p>
+          <p class="card-text"><img src="./img/imdb.png" class="card-img-nota" alt="icone imdb"> ${filmes_.nota}</p>
           <div class="btn-card">
 
-              <button type="button" class="btn btn-link" onclick="editFilme(${filmes_.id})" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="tooltip" data-placement="top" title="Editar" ><img src=./img/edit.png></button>
+            <button type="button" class="btn btn-link" onclick="editFilme(${filmes_.id})" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="tooltip" data-placement="top" title="Editar" ><img src=./img/edit.png></button>
 
-              <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Deletar" onclick='deleteFilme("${filmes_.id}", "${filmes_.nome}")'><img src=./img/del.png></button>
+            <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Deletar" onclick='deleteFilme("${filmes_.id}", "${filmes_.nome}")'><img src=./img/del.png></button>
               
-              <button type="button" class="btn btn-link" onclick="editVisto(${filmes_.id})" id="img_fls-vst" data-toggle="tooltip" data-placement="top" title="Marcar como visto"><img src=${filmes_.visto}></button>
+            <button type="button" class="btn btn-link" onclick="editVisto(${filmes_.id})" id="img_fls-vst" data-toggle="tooltip" data-placement="top" title="Marcar como visto"><img src=${filmes_.visto}></button>
 
-      </div>
-      </div>
+          </div>
+        </div>
       </div>
         `)   
     })

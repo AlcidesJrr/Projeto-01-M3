@@ -36,7 +36,7 @@ const cardLista_ = async () => {
           <iframe class="video" width="310" height="210" src=${filmes_.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <h5 class="card-title">${filmes_.nome}</h5>
           <p class="card-text"><b>Gêneros</b>: ${filmes_.genero}</p>
-          <p class="card-text"><img src="./img/imdb.png" class="card-img-nota" alt="icone imdb"> ${filmes_.nota}</p>
+          <p class="card-text"><img src="./img/imdb.png" class="card-img-nota" alt="icone imdb"> ${filmes_.nota.toFixed(2).toString().replace(".", ",")}</p>
           <div class="btn-card">
 
             <button type="button" class="btn btn-link" onclick="editFilme(${filmes_.id})" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="tooltip" data-placement="top" title="Editar" ><img src=./img/edit.png></button>

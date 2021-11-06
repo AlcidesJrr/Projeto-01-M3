@@ -23,7 +23,7 @@ header {
 }
 
 footer {
-    position: relative; 
+    position: fixed; 
     height: 2.5rem; 
     width: 100%; 
     bottom: 0;

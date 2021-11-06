@@ -96,14 +96,13 @@ router.get('/:id', (req, res) => {
 router.post('/add', (req, res) => {
     const filmes_ = req.body;
     filmes_.id = Date.now();
-    filmes_.visto = fls;
+    filmes_.visto = false;
     filmes.push(filmes_);
     res.status(201).send({
         message: 'Cadastro realizado com sucesso',
         data: filmes_
     });
 });
-
 
 router.put('/edit/:id', (req, res) => {
     const filmesEdit = req.body;

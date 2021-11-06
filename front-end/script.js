@@ -6,7 +6,6 @@ let idEdicao = 0;
 const vst = './img/vst.png'
 const fls = './img/fls.png'
 
-
 const nome = document.getElementById('nome');
 const genero = document.getElementById('genero');
 const imagem = document.getElementById('imagem');
@@ -20,7 +19,6 @@ const cardLista_ = async () => {
     const filmes= await response.json();
 
     filmes.map((filmes_) => {
-      
       if(filmes_.visto == false) {
         filmes_.visto = fls
       }

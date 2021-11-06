@@ -25,9 +25,7 @@ const cardLista_ = async () => {
       else {
         filmes_.visto = vst
       }
-
         cardLista.insertAdjacentHTML('beforeend', `
-        
       <div class="card" style="width: 19rem;">
         <img src=${filmes_.imagem} class="card-img-top" alt="...">
         <div class="card-body">
@@ -81,6 +79,7 @@ const createFilme = async(filmes_) => {
   const result = await response.json();
   cardLista.innerHTML = '';
   alert(result.message)
+  clearFields();
   cardLista_();
 
 }
@@ -99,6 +98,7 @@ const putFilme = async (filmes_, id) => {
   alert(result.message);
   edicao = false;
   idEdicao = 0;
+  clearFields();
   cardLista_();
 }
 

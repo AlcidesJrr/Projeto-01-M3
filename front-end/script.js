@@ -1,24 +1,33 @@
 const cardLista = document.getElementById('cardLista');
-const visto_ = document.getElementById('visto');
 
 let edicao = false;
 let idEdicao = 0;
+
+const vst = './img/vst.png'
+const fls = './img/fls.png'
+
 
 const nome = document.getElementById('nome');
 const genero = document.getElementById('genero');
 const imagem = document.getElementById('imagem');
 const nota = document.getElementById('nota');
 const trailer = document.getElementById('trailer');
-const visto = document.getElementById('visto');
-
 
 const apiUrl = 'http://localhost:3000';
 
 const cardLista_ = async () => {
     const response = await fetch(apiUrl)
     const filmes= await response.json();
-    console.log(filmes);
+
     filmes.map((filmes_) => {
+      
+      if(filmes_.visto == false) {
+        filmes_.visto = fls
+      }
+      else {
+        filmes_.visto = vst
+      }
+
         cardLista.insertAdjacentHTML('beforeend', `
         
       <div class="card" style="width: 19rem;">
